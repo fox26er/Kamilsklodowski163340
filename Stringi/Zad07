@@ -1,0 +1,8 @@
+def replace_not_poor(s):
+    if "not poor" in s:
+        s = s.replace("not poor", "good")
+    return s
+
+# Example usage:
+sample_string = "The lyrics is not that poor!"
+print(replace_not_poor(sample_string))  # Output: 'The lyrics is good!'

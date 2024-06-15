@@ -1,0 +1,8 @@
+# Original dictionary
+dict_orig = {}
+
+# Checking if the dictionary is empty
+if not dict_orig:
+    print("Dictionary is empty")
+else:
+    print("Dictionary is not empty")

@@ -1,0 +1,2 @@
+def get_smallest_number(input_list):
+    return min(input_list)

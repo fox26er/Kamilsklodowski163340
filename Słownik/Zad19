@@ -1,0 +1,11 @@
+from collections import Counter
+
+# First dictionary
+d1 = {'a': 100, 'b': 200, 'c':300}
+
+# Second dictionary
+d2 = {'a': 300, 'b': 200, 'd':400}
+
+# Combining dictionaries
+result = dict(Counter(d1) + Counter(d2))
+print("Combined dictionary:", result)

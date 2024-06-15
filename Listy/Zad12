@@ -1,0 +1,5 @@
+def remove_elements(input_list):
+    del input_list[0]
+    del input_list[3]
+    del input_list[3]
+    return input_list

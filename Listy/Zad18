@@ -1,0 +1,4 @@
+import itertools
+
+def generate_permutations(input_list):
+    return list(itertools.permutations(input_list))

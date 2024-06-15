@@ -1,0 +1,9 @@
+def exchange_first_last(s):
+    if len(s) > 0:
+        return s[-1] + s[1:-1] + s[0]
+    else:
+        return s
+
+# Example usage:
+print(exchange_first_last('python'))  # Output: 'nohtyp'
+

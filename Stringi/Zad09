@@ -1,0 +1,9 @@
+def remove_nth_index(s, n):
+    if n < len(s):
+        return s[:n] + s[n+1:]
+    else:
+        return s
+
+# Example usage:
+print(remove_nth_index('python', 2))  # Output: 'pyhon'
+

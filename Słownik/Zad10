@@ -1,0 +1,6 @@
+# Original dictionary
+dict_orig = {'a': 1, 'b': 2, 'c': 3}
+
+# Summing all items
+total = sum(dict_orig.values())
+print("Sum of all items:", total)

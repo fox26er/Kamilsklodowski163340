@@ -1,0 +1,9 @@
+def insert_end(s):
+    if len(s) < 2:
+        return s
+    last_two = s[-2:]
+    return last_two + last_two + last_two + last_two
+
+# Example usage:
+print(insert_end('Python'))  # Output: 'onononon'
+print(insert_end('Exercises'))  # Output: 'eseseses'

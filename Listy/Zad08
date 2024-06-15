@@ -1,0 +1,2 @@
+def is_list_empty(input_list):
+    return len(input_list) == 0

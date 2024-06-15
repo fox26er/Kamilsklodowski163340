@@ -1,0 +1,9 @@
+from collections import Counter
+
+def character_frequency(s):
+    return dict(Counter(s))
+
+# Example usage:
+sample_string = "google.com"
+print(character_frequency(sample_string))
+# Expected Result: {'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}

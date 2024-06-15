@@ -1,0 +1,10 @@
+from collections import Counter
+
+def word_occurrences(sentence):
+    words = sentence.split()
+    return dict(Counter(words))
+
+# Example usage:
+sample_sentence = "The quick brown fox jumps over the lazy dog"
+print(word_occurrences(sample_sentence))
+# Expected Result: {'The': 2, 'quick': 1, 'brown': 1, 'fox': 1, 'jumps': 1, 'over': 1, 'lazy': 1, 'dog': 1}

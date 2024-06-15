@@ -1,0 +1,2 @@
+def sort_tuples(input_list):
+    return sorted(input_list, key=lambda x: x[1])

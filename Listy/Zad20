@@ -1,0 +1,2 @@
+def find_index(input_list, value):
+    return input_list.index(value)

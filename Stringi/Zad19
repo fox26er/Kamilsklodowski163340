@@ -1,0 +1,7 @@
+def get_last_part(url):
+    last_slash_index = url.rfind("/")
+    return url[last_slash_index + 1:]
+
+# Example usage:
+print(get_last_part('https://www.w3resource.com/python-exercises'))  # Output: 'python-exercises'
+print(get_last_part('https://www.w3resource.com/python'))  # Output: 'python'

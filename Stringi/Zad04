@@ -1,0 +1,6 @@
+def change_first_char(s):
+    first_char = s[0]
+    return first_char + s[1:].replace(first_char, '$')
+
+# Example usage:
+print(change_first_char('restart'))  # Output: 'resta$t'

@@ -1,0 +1,4 @@
+binary_numbers = input("Enter binary numbers separated by commas: ")
+binary_numbers = [int(num, 2) for num in binary_numbers.split(",")]
+divisible_by_5 = [num for num in binary_numbers if num % 5 == 0]
+print(",".join(map(str, divisible_by_5)))

@@ -1,0 +1,6 @@
+# Original dictionary
+dict_orig = {'a': 1, 'b': 2, 'c': 3}
+
+# Iterating over keys and values
+for key, value in dict_orig.items():
+    print(f"Key: {key}, Value: {value}")

@@ -1,0 +1,8 @@
+import math
+
+# Original dictionary
+dict_orig = {'a': 1, 'b': 2, 'c': 3}
+
+# Multiplying all items
+product = math.prod(dict_orig.values())
+print("Product of all items:", product)

@@ -1,0 +1,8 @@
+# Original dictionary
+dict_orig = {'c': 3, 'a': 1, 'b': 2}
+
+# Getting maximum and minimum values
+max_value = max(dict_orig.values())
+min_value = min(dict_orig.values())
+print("Maximum value:", max_value)
+print("Minimum value:", min_value)

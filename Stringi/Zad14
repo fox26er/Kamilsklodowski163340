@@ -1,0 +1,7 @@
+def print_distinct_words(words):
+    distinct_words = sorted(set(words.split(", ")))
+    print(", ".join(distinct_words))
+
+# Example usage:
+print_distinct_words("red, white, black, red, green, black")
+# Expected Result: 'black, green, red, white'

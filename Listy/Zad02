@@ -1,0 +1,5 @@
+def multiply_list(input_list):
+    result = 1
+    for i in input_list:
+        result *= i
+    return result

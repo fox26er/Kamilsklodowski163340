@@ -1,0 +1,9 @@
+# Original dictionary
+dict_orig = {0: 10, 1: 20}
+
+# Checking for a key
+key_to_check = 1
+if key_to_check in dict_orig:
+    print("Key exists in the dictionary")
+else:
+    print("Key does not exist in the dictionary")

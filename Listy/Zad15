@@ -1,0 +1,5 @@
+import random
+
+def shuffle_and_print(input_list):
+    random.shuffle(input_list)
+    print(input_list)

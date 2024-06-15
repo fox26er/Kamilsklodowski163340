@@ -1,0 +1,2 @@
+def common_members(list1, list2):
+    return len(list(set(list1) & set(list2))) > 0

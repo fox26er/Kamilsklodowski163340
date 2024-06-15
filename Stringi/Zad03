@@ -1,0 +1,10 @@
+def get_first_last_chars(s):
+    if len(s) < 2:
+        return ""
+    return s[:2] + s[-2:]
+
+# Example usage:
+print(get_first_last_chars('w3resource'))  # Output: 'w3ce'
+print(get_first_last_chars('w3'))          # Output: 'w3w3'
+print(get_first_last_chars(' w'))         # Output: ''
+

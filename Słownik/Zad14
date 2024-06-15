@@ -1,0 +1,6 @@
+# Original dictionary
+dict_orig = {'c': 3, 'a': 1, 'b': 2}
+
+# Sorting the dictionary by key
+sorted_dict = dict(sorted(dict_orig.items(), key=lambda item: item[0]))
+print("Sorted dictionary by key:", sorted_dict)

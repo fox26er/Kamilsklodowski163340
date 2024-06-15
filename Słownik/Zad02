@@ -1,0 +1,6 @@
+# Original dictionary
+dict_orig = {0: 10, 1: 20}
+
+# Adding a key-value pair
+dict_orig[2] = 30
+print("Dictionary after adding a key:", dict_orig)

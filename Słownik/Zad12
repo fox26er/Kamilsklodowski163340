@@ -1,0 +1,10 @@
+# Original dictionary
+dict_orig = {'a': 1, 'b': 2, 'c': 3}
+
+# Removing a key using del
+del dict_orig['b']
+print("Dictionary after removing a key using del:", dict_orig)
+
+# Removing a key using pop
+dict_orig.pop('c')
+print("Dictionary after removing a key using pop:", dict_orig)

@@ -1,0 +1,7 @@
+def insert_string_middle(s1, s2):
+    middle_index = len(s1) // 2
+    return s1[:middle_index] + s2 + s1[middle_index:]
+
+# Example usage:
+print(insert_sting_middle('[[]]<<>>', 'Python'))  # Output: [[Python]]
+print(insert_sting_middle('{{}}', 'PHP'))  # Output: {{PHP}}

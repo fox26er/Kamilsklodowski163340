@@ -1,0 +1,2 @@
+def generate_3d_array():
+    return [[['*']*6 for _ in range(4)] for _ in range(3)]

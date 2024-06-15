@@ -1,0 +1,9 @@
+# First list
+keys = ['a', 'b', 'c']
+
+# Second list
+values = [1, 2, 3]
+
+# Mapping lists into a dictionary
+result = dict(zip(keys, values))
+print("Mapped dictionary:", result)
