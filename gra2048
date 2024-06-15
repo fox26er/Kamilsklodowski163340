@@ -1,0 +1,79 @@
+import tkinter as tk
+import random
+
+class Game2048:
+    def __init__(self, master):
+        self.master = master
+        self.master.title("2048")
+        self.master.bind("<Key>", self.key_press)
+        self.grid_size = 4
+        self.grid = [[0] * self.grid_size for _ in range(self.grid_size)]
+        self.add_new_tile()
+        self.add_new_tile()
+        self.canvas = tk.Canvas(self.master, bg="white", width=self.grid_size * 100, height=self.grid_size * 100)
+        self.canvas.pack()
+        self.draw_grid()
+
+    def draw_grid(self):
+        self.canvas.delete("all")
+        for i in range(self.grid_size):
+            for j in range(self.grid_size):
+                x = j * 100
+                y = i * 100
+                tile_value = self.grid[i][j]
+                color = "lightgrey" if tile_value == 0 else "orange"
+                self.canvas.create_rectangle(x, y, x + 100, y + 100, fill=color)
+                if tile_value != 0:
+                    self.canvas.create_text(x + 50, y + 50, text=str(tile_value), font=("Arial", 24), fill="black")
+
+    def add_new_tile(self):
+        empty_tiles = [(i, j) for i in range(self.grid_size) for j in range(self.grid_size) if self.grid[i][j] == 0]
+        if empty_tiles:
+            i, j = random.choice(empty_tiles)
+            self.grid[i][j] = random.choice([2, 4])
+
+    def move_left(self):
+        new_grid = []
+        for row in self.grid:
+            new_row = [i for i in row if i != 0]
+            for i in range(len(new_row) - 1):
+                if new_row[i] == new_row[i + 1]:
+                    new_row[i] *= 2
+                    new_row[i + 1] = 0
+            new_row = [i for i in new_row if i != 0]
+            new_row += [0] * (self.grid_size - len(new_row))
+            new_grid.append(new_row)
+        if self.grid != new_grid:
+            self.grid = new_grid
+            self.add_new_tile()
+
+    def move_right(self):
+        self.grid = [row[::-1] for row in self.grid]
+        self.move_left()
+        self.grid = [row[::-1] for row in self.grid]
+
+    def move_up(self):
+        self.grid = list(map(list, zip(*self.grid)))
+        self.move_left()
+        self.grid = list(map(list, zip(*self.grid)))
+
+    def move_down(self):
+        self.grid = list(map(list, zip(*self.grid)))
+        self.move_right()
+        self.grid = list(map(list, zip(*self.grid)))
+
+    def key_press(self, event):
+        if event.keysym == 'Left':
+            self.move_left()
+        elif event.keysym == 'Right':
+            self.move_right()
+        elif event.keysym == 'Up':
+            self.move_up()
+        elif event.keysym == 'Down':
+            self.move_down()
+        self.draw_grid()
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    game = Game2048(root)
+    root.mainloop()
